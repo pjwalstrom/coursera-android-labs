@@ -1,3 +1,20 @@
+# pj
+*.zip
+.idea
+*.iml
+*.iws
+*.ipr
+*.bak
+gradlew.bat
+.gradle
+gradle/
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+*.svn
+
 # Built application files
 *.apk
 *.ap_
