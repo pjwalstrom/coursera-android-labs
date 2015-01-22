@@ -69,7 +69,7 @@ public class ActivityOne extends Activity {
 
 				// Create an intent stating which Activity you would like to
 				// start
-				Intent intent = new Intent("course.labs.activitylab.ActivityTwo");
+                Intent intent = new Intent(getApplicationContext(),ActivityTwo.class);
 
 				// Launch the Activity using the intent
                 startActivity(intent);
@@ -82,10 +82,10 @@ public class ActivityOne extends Activity {
 			// TODO:
 			// Restore value of counters from saved state
 			// Only need 4 lines of code, one for every count variable
-            mCreate = savedInstanceState.getInt("mCreate");
-            mRestart = savedInstanceState.getInt("mRestart");
-            mStart = savedInstanceState.getInt("mStart");
-            mResume = savedInstanceState.getInt("mResume");
+            mCreate = savedInstanceState.getInt(CREATE_KEY);
+            mRestart = savedInstanceState.getInt(RESTART_KEY);
+            mStart = savedInstanceState.getInt(START_KEY);
+            mResume = savedInstanceState.getInt(RESUME_KEY);
 
 		}
 
@@ -113,6 +113,7 @@ public class ActivityOne extends Activity {
 		// Update the appropriate count variable
 		// Update the user interface
         mStart++;
+        displayCounts();
 	}
 
 	@Override
@@ -126,6 +127,7 @@ public class ActivityOne extends Activity {
 		// Update the appropriate count variable
 		// Update the user interface
         mResume++;
+        displayCounts();
 	}
 
 	@Override
@@ -155,6 +157,7 @@ public class ActivityOne extends Activity {
 		// Update the appropriate count variable
 		// Update the user interface
         mRestart++;
+        displayCounts();
 
 	}
 
@@ -171,10 +174,10 @@ public class ActivityOne extends Activity {
 		// TODO:
 		// Save state information with a collection of key-value pairs
 		// 4 lines of code, one for every count variable
-        savedInstanceState.putInt("mCreate", mCreate);
-        savedInstanceState.putInt("mRestart", mRestart);
-	    savedInstanceState.putInt("mStart", mStart);
-        savedInstanceState.putInt("mResume", mResume);
+        savedInstanceState.putInt(CREATE_KEY, mCreate);
+        savedInstanceState.putInt(RESTART_KEY, mRestart);
+	    savedInstanceState.putInt(START_KEY, mStart);
+        savedInstanceState.putInt(RESUME_KEY, mResume);
     }
 	// Updates the displayed counters
 	// This method expects that the counters and TextView variables use the
