@@ -26,6 +26,7 @@
             android:name=".ExplicitlyLoadedActivity"
             android:label="@string/title_explicit" >
         </activity>
+        <activity android:name=".MyBrowserActivity"
     </application>
 
 </manifest>
