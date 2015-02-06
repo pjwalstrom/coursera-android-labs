@@ -55,7 +55,7 @@ public class ToDoManagerActivity extends ListActivity {
 			return;
 		}
 		// TODO - Add footerView to ListView
-
+        getListView().addFooterView(footerView);
 		
 		footerView.setOnClickListener(new OnClickListener() {
 			@Override
